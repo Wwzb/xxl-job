@@ -70,19 +70,4 @@ public class GsonTool {
         public Type getOwnerType() {return null;}
     }
 
-    /**
-     * json 转成 特定的cls的list
-     *
-     * @param json
-     * @param classOfT
-     * @return
-     */
-    public static <T> List<T> fromJsonList(String json, Class<T> classOfT) {
-        return gson.fromJson(
-                json,
-                new TypeToken<List<T>>() {
-                }.getType()
-        );
-    }
-
 }
